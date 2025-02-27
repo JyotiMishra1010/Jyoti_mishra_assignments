@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//explicit key word can not use in function 
 class A {
 public:
 	//implicit conversion 
