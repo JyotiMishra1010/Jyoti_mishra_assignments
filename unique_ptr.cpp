@@ -60,6 +60,11 @@ int main() {
 	container.push_back(std::make_unique<int>(56));
 	container.push_back(std::make_unique<int>(45));
 
+	for (int i = 0;i < container.size();i++)
+	{
+		std::cout << *container[i] << std::endl;
+	}
+
 
 
 	return 0;
