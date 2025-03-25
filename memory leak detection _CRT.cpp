@@ -1,3 +1,5 @@
+
+//through library
 #define _CRTDBG_MAP_ALLOC
 #include <cstdlib>
 #include <iostream>
@@ -5,7 +7,7 @@
 
 int main() {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-
+//memory leak
     int* n = new int(10);
     float* x = new float(20);
     double* y = new double(30);
