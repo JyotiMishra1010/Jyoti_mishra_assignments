@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -13,7 +12,7 @@ int main() {
     auto add = [](int a, int b) { return a + b; };
     auto Val = [x] { std::cout << "Captured: " << x << std::endl; };
     auto Ref = [&y] { y += 5; std::cout << "Modified y: " << y << std::endl; };
-    auto outerLambda = [](int factor) { return [factor](int num) { return num * factor; }; };
+    auto outerLambda = [](int factor) { return [factor](int num) { return num * factor +num; }; };
     auto square = [](auto n) { return n * n; };
 
     hello();
@@ -21,12 +20,5 @@ int main() {
     Val();
     Ref();
     std::cout << "Multiplied: " << outerLambda(3)(4) << std::endl;
-
-    std::vector<int> v = { 5, 2, 9, 1, 6 };
-    std::sort(v.begin(), v.end(), [](int a, int b) { return a < b; });
-    for (int n : v) std::cout << n << " ";
-    std::cout << std::endl;
-
     apply(square, 5);
-    apply(square, 3.5);
 }
